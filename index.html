@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پیشگوی فارسی</title>
+    <style>
+        * {text-align: center;}
+        html {height: 100%;}
+        body {background-image: linear-gradient(white, blue);}
+    </style>
+  </head>
+  <body>
+    <h1>پیشگوی فارسی</h1>
+    <input id="quastion" type="text" placeholder="سوال خود را وارد کنید" style="font-size: 20px; border-radius: 0%;" onblur="getVal()";><br>
+    <button id="submit" style="font-size: 18px; text-transform: uppercase; margin-top: 2px; cursor: pointer;">پیشگویی</button><br>
+    <script>
+        var submit = document.getElementById("submit");
+        submit.onclick = function() {
+            var quastion = document.getElementById("quastion").value;
+            var answer = Math.random() < 0.5;
+            if (answer) {
+                alert("سوال: " + quastion + "\nپاسخ پیشگو: بله");
+            } else {
+                alert("سوال: " + quastion + "\nپاسخ پیشگو: خیر");
+            }
+        }
+    </script>
+  </body>
+</html>
